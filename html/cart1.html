@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Cart1</title> <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+    
+	<style type="text/css">
+		@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+	*{
+		margin: 0;
+		padding: 0;
+		color: #454545;
+    }
+    nav{
+    background: #0082e6;
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    color:white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+.logo1{
+    width:300px;
+   
+    
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+a.active, a:hover{
+    background: #1b9bff;
+    transition: 0.5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+	h1{
+		width: 3%;
+	    position: relative;
+	    top: 60px;
+	    left: 90%;
+	    cursor: pointer;
+	}
+	h1:before{
+		content: attr(data-count);
+	    color: white;
+	    position: absolute;
+	    right: 16px;
+	    font-size: 15px;
+	    text-align: center;
+	    top: -12px;
+	    width: 20px;
+	    height: 20px;
+	    background:dodgerblue;
+	    border-radius: 50%;
+	    opacity: 0;
+	}
+	h1.zero:before{
+		opacity: 1;
+	}
+		section{
+			margin: 100px auto;
+			width: 90%;
+			height: 400px;
+			display: flex;
+			justify-content: space-around;
+		}
+		section div{
+			width: 22%;
+			height: 93%;
+			background:#f5f5f5;
+			padding: 1%;
+			position: relative;
+		}
+		img{
+			width: 300px;
+			height: 186px;
+		}
+
+		p{
+			margin: 5px;
+		}
+		h6{
+		    width: 50px;
+		    padding: 5px;
+		    margin: 10px;
+		    font-size: 15px;
+		}
+		button{
+			padding: 5px;
+		    background: dodgerblue;
+		    border: none;
+		    outline: none;
+		    font-weight: bold;
+		    color: #fafafa;
+		    cursor: pointer;
+		}
+		section div span{
+			position: absolute;
+		    top: 14px;
+		    left: 13px;
+		    background: dodgerblue;
+		    width: 300px;
+		    height: 186px;
+		    display: none;
+		}
+		section div span img{
+			width: 100%;
+			height: 100%;
+		}
+		section div:nth-child(1)>span.active{
+			animation: first 0.5s ease-in;
+			z-index: 2;
+			display: block;
+
+		}
+		section div:nth-child(2)>span.active{
+			animation: second 0.5s ease-in;
+			z-index: 2;
+			display: block;
+
+		}
+		section div:nth-child(3)>span.active{
+			animation: third 0.5s ease-in;
+			z-index: 2;
+			display: block;
+
+		}
+		section div:nth-child(4)>span.active{
+			animation: four 0.5s ease-in;
+			z-index: 2;
+			display: block;
+
+		}
+		@keyframes first{
+			to{
+				width: 30px;
+			    height: 20px;
+			    left: 1290px;
+			    top: -70px;
+			}
+		}
+		@keyframes second{
+			to{
+				width: 30px;
+			    height: 20px;
+			    left: 948px;
+			    top: -70px;
+			}
+		}
+		@keyframes third{
+			to{
+				width: 30px;
+			    height: 20px;
+			    left: 606px;
+			    top: -70px;
+			}
+		}
+		@keyframes four{
+			to{
+				width: 30px;
+			    height: 20px;
+			    left: 265px;
+			    top: -70px;
+			}
+		}
+
+
+		
+		.select{
+			width: 60%;
+			height: 580px;
+			padding: 5%;
+			background: #222;
+			position: absolute;
+			top: -1000px;
+			left: 20%;
+			transition: 0.5s;
+			overflow-y: auto;
+			margin: auto;
+		}
+		.select.display{
+			top: 10px;
+		}
+		.select div{
+			width: 100%;
+			height: 200px;
+			display: flex;
+			padding: 5px;
+			border: 1px solid white;
+			position: relative;
+			margin: 5px auto;
+		}
+		.select div img{
+			width: 300px;
+			height: 100%;
+		}
+		.select div p{
+			padding: 35px;
+			color: white;
+		}
+		.select div h6,
+		.select div button{
+			position: absolute;
+			left: 45%;
+			top: 50%;
+			color: white;
+		}
+		.select div button{
+			left: 60%;
+			top: 55%;
+		}
+		.select div span{
+			display: none;
+		}
+
+		
+	
+	</style>
+</head>
+<body>
+	<nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i></label>
+        <label class="logo"><img src="/nogozo.png" class="logo1"></img></label>
+        <ul>
+            <li><a href="/html/index.html">Home</a></li>
+            <li><a href="/html/cart1.html" class="active">Features</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </nav>
+	<h1><i class=" fa fa-shopping-cart"></i></h1>
+
+	<section>
+		<div class="item">
+			<img src="/css/download.png">
+			<p>Groceries and Essentials</p>
+			<h6>₹300</h6>
+			<span></span>
+			<button>Add to cart</button>
+			
+		</div>
+		<div class="item">
+			<img src="/css/food.png">
+			<p>Food outlets and Restaurants</p>
+			<h6>₹250</h6>
+			<span></span>
+			<button>Add to cart</button>
+		</div>
+		<div class="item">
+			<img src="/css/books.png">
+			<p>Staionary & Books</p>
+			<h6>₹100</h6>
+			<span></span>
+			<button>Add to cart</button>
+		</div>
+		<div class="item">
+			<img src="/css/fashion.png">
+			<p>Fashion and Personal Care</p>
+			<h6>₹500</h6>
+			<span></span>
+			<button>Add to cart</button>
+		</div>
+	</section>
+	<div class="select">
+		
+	</div>
+	
+</body>
+</html>
+
+<script type="text/javascript">
+	var noti = document.querySelector('h1');
+	var select = document.querySelector('.select');
+	var button = document.getElementsByTagName('button');
+	for(var but of button){
+		but.addEventListener('click', (e)=>{
+			var add = Number(noti.getAttribute('data-count') || 0);
+			noti.setAttribute('data-count', add +1);
+			noti.classList.add('zero')
+
+			// image --animation to cart ---//
+			var image = e.target.parentNode.querySelector('img');
+			var span = e.target.parentNode.querySelector('span');
+			var s_image = image.cloneNode(false);
+			span.appendChild(s_image);
+			span.classList.add("active");
+			setTimeout(()=>{
+				span.classList.remove("active");
+				span.removeChild(s_image);
+			}, 500); 
+			
+
+			// copy and paste //
+			var parent = e.target.parentNode;
+			var clone = parent.cloneNode(true);
+			select.appendChild(clone);
+			clone.lastElementChild.innerText = "Buy-now";
+			
+			if (clone) {
+				noti.onclick = ()=>{
+					select.classList.toggle('display');
+				}	
+			}
+		})
+	}
+	
+	
+
+
+	
+	
+
+	
+</script>
